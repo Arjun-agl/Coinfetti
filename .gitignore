@@ -1,0 +1,14 @@
+# Runtime user data: accounts (password hashes) and portfolios
+data/
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Local Streamlit secrets
+.streamlit/secrets.toml

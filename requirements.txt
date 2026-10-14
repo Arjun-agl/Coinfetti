@@ -1,0 +1,7 @@
+streamlit>=1.27
+yfinance
+pandas
+numpy
+matplotlib
+mplfinance
+requests
