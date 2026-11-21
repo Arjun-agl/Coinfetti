@@ -1,5 +1,6 @@
 import streamlit as st
 import yfinance as yf
+import market_data
 import pandas as pd
 import matplotlib.pyplot as plt
 from theme import apply_theme
@@ -55,7 +56,7 @@ symbol2 = all_tickers[ticker_name_2]
 # --------------------------
 @st.cache_data(ttl=3600)
 def get_fundamentals(sym, cache_key):
-    info = yf.Ticker(sym).info or {}
+    info = market_data.get_info(sym) or {}
     is_india = sym.endswith(".NS")
 
     def convert(val):

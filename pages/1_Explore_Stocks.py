@@ -1,5 +1,6 @@
 import streamlit as st
 import yfinance as yf
+import market_data
 import pandas as pd
 import numpy as np
 import mplfinance as mpf
@@ -79,7 +80,7 @@ def get_price_data(sym, per, interval):
 @st.cache_data(ttl=3600)
 def get_fundamentals(sym):
     try:
-        info = yf.Ticker(sym).info
+        info = market_data.get_info(sym)
         if not info:
             return None
         return {

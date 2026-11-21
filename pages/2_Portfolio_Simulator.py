@@ -1,5 +1,6 @@
 import streamlit as st
 import yfinance as yf
+import market_data
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -82,7 +83,7 @@ def fetch_history(symbol, period="1y"):
 @st.cache_data(ttl=600)
 def fetch_info(symbol):
     try:
-        return yf.Ticker(symbol).info
+        return market_data.get_info(symbol)
     except:
         return {}
 
