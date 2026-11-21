@@ -5,6 +5,8 @@ and tracking a simple personal portfolio. Prices and fundamentals come live from
 Finance (via `yfinance`) and mutual-fund NAVs from MFAPI.in. Global stocks are shown in
 INR so Indian and global holdings can be compared on one scale.
 
+**Live app:** <https://coinfetti.streamlit.app> (click *Continue as guest* to try it without an account; the first load can take ~30 s if the app has been asleep).
+
 > Educational project. Prices are indicative, there is no trading or payment integration,
 > and nothing here is financial advice.
 
