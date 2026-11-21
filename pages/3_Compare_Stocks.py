@@ -125,6 +125,8 @@ currency_rows = [
 for col in [ticker_name_1, ticker_name_2]:
     def format_cell(row):
         val = row[col]
+        if val is None or (isinstance(val, float) and val != val):
+            return "—"   # not available (Yahoo sometimes withholds this data)
         if (
             row["Metric"] in currency_rows
             and isinstance(val, (int, float))
