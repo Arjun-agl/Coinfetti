@@ -23,8 +23,12 @@ if "user" not in st.session_state:
     st.markdown("""
     Welcome to a **CoinFetti finance analytics platform**.
 
-    Please **login or create an account** to continue.
+    Please **login or create an account** to continue, or try it straight away as a guest.
     """)
+
+    if st.button("👀 Continue as guest"):
+        st.session_state.user = "guest"
+        st.rerun()
 
     tab1, tab2 = st.tabs(["🔐 Login", "🆕 Signup"])
 
